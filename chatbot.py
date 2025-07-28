@@ -1,7 +1,7 @@
 # Core AI logic (Ollama connection)
-#Use LangChain to build a prompt.
-#Connect with the Ollama LLM (e.g. llama3).
-#Fetch responses based on current + past conversations.
+# Use LangChain to build a prompt.
+# Connect with the Ollama LLM (e.g. llama3).
+# Fetch responses based on current + past conversations.
 # THIS WHOLE PROJECT IS BUILT ON “RAG” (Retrieval-Augmented Generation) — not
 # retraining, but augmenting the model with external memory.
 
@@ -17,18 +17,19 @@ llm = Ollama(model="llama3")
 memory = ConversationBufferMemory()
 
 
-#LangChain conversation chain
+# LangChain conversation chain
 conversation = ConversationChain(
-    llm = llm,
-    memory = memory,
-    verbose = True, # shows what's going on the inside
+    llm=llm,
+    memory=memory,
+    verbose=True,  # shows what's going on the inside
 )
+
 
 def get_bot_response(user_input):
     return conversation.predict(input=user_input)
 
 
-#Ollama(model="llama3"): Connects to your local LLM.
-#ConversationBufferMemory(): Keeps chat history in memory (RAM).
-#ConversationChain: A LangChain tool to handle multi-turn chats.
-#get_bot_response(user_input): Takes user input, returns bot reply.
+# Ollama(model="llama3"): Connects to your local LLM.
+# ConversationBufferMemory(): Keeps chat history in memory (RAM).
+# ConversationChain: A LangChain tool to handle multi-turn chats.
+# get_bot_response(user_input): Takes user input, returns bot reply.
