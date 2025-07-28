@@ -1,0 +1,5 @@
+# List of Python packages
+streamlit
+chromadb
+langchain
+requests
