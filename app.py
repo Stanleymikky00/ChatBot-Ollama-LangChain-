@@ -30,10 +30,10 @@ if user_input:
     # Save updated conversation
     save_conversation(user_input, bot_response=response)
 
-    #st.session_state.messages Keeps chat memory in the web app session
-    #chat_input(...) Gets user input like a real
-    #st.chat_message(...) Stream_lit’s way of showing styled chat
-    #ave_conversation(...) Writes the chat to a file (JSON)
+    # st.session_state.messages Keeps chat memory in the web app session
+    # chat_input(...) Gets user input like a real
+    # st.chat_message(...) Stream_lit’s way of showing styled chat
+    # ave_conversation(...) Writes the chat to a file (JSON)
 
 
 
